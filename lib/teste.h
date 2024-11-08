@@ -15,10 +15,10 @@ int maiorvalor(int n[], int qtd){
 
 
 char sexo(char letra){
-    if (letra == 'f') {
+    if (letra == 'f' || letra == 'F' ) {
         printf("Feminino");
     }
-    else if (letra == 'm') {
+    else if (letra == 'm'  || letra == 'M') {
         printf("masculino");
     }
     else {
@@ -49,5 +49,6 @@ void vogal(char letra){
     }
 
 }
+
 
 
