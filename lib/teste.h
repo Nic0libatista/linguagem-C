@@ -51,4 +51,30 @@ void vogal(char letra){
 }
 
 
+void reajuste(float salario){
+  float aumento;
+  float novo_salario;
+  if (salario <=280){
+    aumento = salario * (20.0 / 100);
+    novo_salario = 280 + aumento;
+    printf("O salario antigo é %f e foi reajustado em 20%. O valor de aumento é %f ",salario, aumento, novo_salario );
+  } 
+
+  else if (salario > 280 && salario <=700){
+    aumento = salario * (15.0/ 100);
+    novo_salario = 280 + aumento;
+    printf("O salario antigo é %f e foi reajustado em 15%. O valor de aumento é %f ",salario, aumento, novo_salario );
+  } 
+  else if(salario <=1500){
+    aumento = salario * (10.0 / 100);
+    novo_salario = 280 + aumento;
+    printf("O salario antigo é %f e foi reajustado em 10%. O valor de aumento é %f ",salario, aumento, novo_salario );
+  } 
+  else if(salario >1500){
+    aumento = salario * (5.0 / 100);
+    novo_salario = 280 + aumento;
+    printf("O salario antigo é %f e foi reajustado em 5%. O valor de aumento é %f ",salario, aumento, novo_salario );
+  } 
+}
+
 
