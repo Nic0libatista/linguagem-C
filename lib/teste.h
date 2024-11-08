@@ -1,4 +1,5 @@
 
+#include <stdio.h>
 int maiorvalor(int n[], int qtd){
     int m = n[0];
     int i;
@@ -11,3 +12,42 @@ int maiorvalor(int n[], int qtd){
     }
     return m; 
 }
+
+
+char sexo(char letra){
+    if (letra == 'f') {
+        printf("Feminino");
+    }
+    else if (letra == 'm') {
+        printf("masculino");
+    }
+    else {
+        printf("inexistente");
+    }
+    
+
+}
+
+void vogal(char letra){
+    if (letra == 'a'){
+        printf ("%c é vogal",letra);
+    }
+    else if (letra == 'e'){
+        printf ("%c é vogal",letra);
+    }
+       else if (letra == 'i'){
+        printf ("%c é vogal",letra);
+    }
+       else if (letra == 'o'){
+        printf ("%c é vogal",letra);
+    }
+       else if (letra == 'u'){
+        printf ("%c é vogal",letra);
+    }
+    else {
+        printf("%c Nâo é vogal",letra);
+    }
+
+}
+
+
