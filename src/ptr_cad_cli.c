@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-void cadastro(char *nome, char *email, char *idade){
+void cadastro(char *nome, char *email, int *idade){
     FILE *arquivo;
     arquivo = fopen("files/cad_cli.txt" ,"a");
-    fprintf(arquivo,nome);
-    fprintf(arquivo,email);
-    fprintf(arquivo,idade);
+    fprintf(arquivo,"Nome: %s\n",nome);
+    fprintf(arquivo,"Email: %s\n" ,email);
+    fprintf(arquivo,"Idade:%d\n"  ,*idade);
+    fprintf(arquivo, "--------------------------------------------------");
     fclose(arquivo);
 }
 
     int main(){
         char nome[30];
         char email[50];
-        char idade[2];
+        int idade;
 
         printf("Digite o seu nome e tecle enter: \n");
         scanf("%[^\n]s" ,nome);
@@ -21,9 +22,9 @@ void cadastro(char *nome, char *email, char *idade){
         scanf("%s" ,email);
 
         printf("Digite sua idade e tecle enter: \n");
-        scanf("%s" ,idade);
+        scanf("%d" ,&idade);
 
-        cadastro(nome,email,idade);
+        cadastro(nome,email,&idade);
         printf("Cadastrado com sucesso!!\n");
         return 0;
     }
